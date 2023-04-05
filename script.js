@@ -1,4 +1,7 @@
-
+fetch('./pets.json')
+    .then(data => data.json())
+    .then(data2 => pageBuilder(data2));
+    
 let head = document.querySelector('.header');
 
 function pageBuilder(pets) {
@@ -43,4 +46,3 @@ function pageBuilder(pets) {
 
 
 }
-pageBuilder(pets);
